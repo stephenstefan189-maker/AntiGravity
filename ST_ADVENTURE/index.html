@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes of the Bible | Sunday School Game</title>
+    <meta name="description" content="An interactive Bible character recognition game for Sunday School children.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sunflower-bg"></div>
+
+    <div id="game-app">
+        <header>
+            <div class="header-content">
+                <span class="logo-emoji">📖</span>
+                <h1>Heroes of the Bible</h1>
+                <div class="score-board">
+                    <span id="progress">Hero 1/10</span> | Stars: <span id="score">0</span> ⭐
+                </div>
+            </div>
+        </header>
+
+        <main id="game-display">
+            <!-- Start Screen -->
+            <div id="start-screen" class="card">
+                <h2>Welcome, Hero!</h2>
+                <p>Can you guess the Bible character from the clues?</p>
+                <button id="btn-start" class="big-btn">Start Playing!</button>
+            </div>
+
+            <!-- Quiz Screen (Hidden initially) -->
+            <div id="quiz-screen" class="card hidden">
+                <div class="clue-box">
+                    <h3>Who am I?</h3>
+                    <ul id="clue-list">
+                        <!-- Clues will appear here -->
+                    </ul>
+                </div>
+
+                <div class="options-container" id="options">
+                    <!-- Options will appear here -->
+                </div>
+
+                <div id="feedback" class="feedback-text"></div>
+            </div>
+        </main>
+
+        <!-- Game Over / Victory (Hidden initially) -->
+        <div id="win-screen" class="modal hidden">
+            <div class="card bounce">
+                <h2>AMAZING! 🌟</h2>
+                <p>You know your Bible Heroes very well!</p>
+                <div id="final-score-display"></div>
+                <button id="btn-restart" class="big-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
